@@ -1,11 +1,8 @@
-year = int(input("Enter a year:"))
-if year % 4 == 0:
-  if year % 100 == 0:
-    if year % 400 == 0:
-      print(year,"is a leap year.")
+def factorial(n):
+    if n == 0 or n == 1:
+       return 1
     else:
-      print(year,"is not a leap year.")
-  else:
-      print(year,"is a leap year.")
-else:
-   print(year,"is not a leap year.")
+      return n * factorial(n - 1)
+num = int(input ("Enter a number:"))
+result = factorial(num)
+print(f"The factorial of{num} is {result}")
